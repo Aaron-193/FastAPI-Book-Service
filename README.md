@@ -7,7 +7,7 @@
 
 ## 1. 🎯 Title & Objective
 
-**Technology Chosen:** FastAPI (Python Framework) & PostgreSQL (Relational Database)  
+**Technology Chosen:** FastAPI (Python Framework) & PostgreSQL (Relational Database)
 
 **Objective:** To provide a streamlined, crash-course guide for developers to build a high-performance REST API using FastAPI. This toolkit focuses on the "hard parts" often skipped in basic tutorials: connecting to a real PostgreSQL database, handling authentication errors, and validating data with Pydantic.
 
@@ -195,7 +195,23 @@ If you run into trouble, check these common pitfalls encountered during the crea
 
 ---
 
-## 8. 📚 References
+## 8. ⚖️ Bonus: Flask vs. FastAPI
+
+Since many Python developers start with Flask, here is a quick comparison to help you understand why you might choose one over the other.
+
+| Feature | **Flask** | **FastAPI** |
+| :--- | :--- | :--- |
+| **Performance** | Slower (Synchronous WSGI by default). | **Very Fast** (Asynchronous ASGI, comparable to NodeJS/Go). |
+| **Data Validation** | Manual (requires libraries like Marshmallow). | **Automatic** (Built-in via Pydantic). |
+| **Documentation** | Manual (you write the API docs). | **Automatic** (Generates interactive Swagger UI for you). |
+| **Async Support** | Added recently, but not "native" to the core design. | **Native** (Designed for `async` / `await` from the ground up). |
+| **Best For...** | Simple HTML rendering, legacy apps, quick prototypes. | High-performance APIs, ML models, Microservices. |
+
+**Verdict:** Choose **FastAPI** if you are building an API (backend for React/Vue/Mobile). Choose **Flask** if you need a simple tool to render HTML pages quickly without much structure.
+
+---
+
+## 9. 📚 References
 
 * [FastAPI Official Documentation](https://fastapi.tiangolo.com/) - The gold standard for modern API docs.
 * [SQLAlchemy ORM Tutorial](https://docs.sqlalchemy.org/en/14/orm/tutorial.html) - Deep dive into database models.
